@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import logo_icon from '../../assets/icons/logo_icon.svg';
 import logo_name from '../../assets/icons/logo_icon_name.svg';
 import { HiOutlineMenuAlt1 } from 'react-icons/hi';
@@ -7,8 +7,8 @@ import { HiOutlineX } from 'react-icons/hi';
 
 import './nav.css';
 
-const Nav = () => {
-    const [menuOpen, setMenuOpen] = useState(false);
+const Nav = ({open}) => {
+  const [menuOpen, setMenuOpen] = useState(false);
 
   return (
     <div className="nav__container">
@@ -19,50 +19,66 @@ const Nav = () => {
       <div className="link__section">
         <ul>
           <li>
-            <Link to="/">Home</Link>
+            <NavLink to="/">Home</NavLink>
           </li>
 
           <li>
-            <Link to="/places">Place to stay</Link>
+            <NavLink to="/places">Place to stay</NavLink>
           </li>
           <li>
-            <Link to="#">NFTs</Link>
+            <NavLink to="#">NFTs</NavLink>
           </li>
           <li>
-            <Link to="#">Community</Link>
+            <NavLink to="#">Community</NavLink>
           </li>
         </ul>
       </div>
       <div className="connect__section">
-        <Link>Connect wallet</Link>
+        <button onClick={open}>Connect wallet</button>
       </div>
       <div className="mobile__menu">
-        {menuOpen ? <HiOutlineX onClick={() => setMenuOpen(false)}/> : <HiOutlineMenuAlt1 onClick={() => setMenuOpen(true)} />}
+        {menuOpen ? (
+          <HiOutlineX onClick={() => setMenuOpen(false)} />
+        ) : (
+          <HiOutlineMenuAlt1 onClick={() => setMenuOpen(true)} />
+        )}
 
         {/* Mobile Link */}
-      <div className={menuOpen ? "mobile__menu__container" : "mobile__menu__container hide"}>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
+        <div
+          className={
+            menuOpen
+              ? 'mobile__menu__container'
+              : 'mobile__menu__container hide'
+          }
+        >
+          <ul>
+            <li>
+              <NavLink to="/" onClick={() => setMenuOpen(false)}>
+                Home
+              </NavLink>
+            </li>
 
-          <li>
-            <Link to="/places">Place to stay</Link>
-          </li>
-          <li>
-            <Link to="#">NFTs</Link>
-          </li>
-          <li>
-            <Link to="#">Community</Link>
-          </li>
-        </ul>
-        <div className="connect__section__mobile">
-          <Link>Connect wallet</Link>
+            <li>
+              <NavLink to="/places" onClick={() => setMenuOpen(false)}>
+                Place to stay
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="#" onClick={() => setMenuOpen(false)}>
+                NFTs
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="#" onClick={() => setMenuOpen(false)}>
+                Community
+              </NavLink>
+            </li>
+          </ul>
+          <div className="connect__section__mobile">
+            <button onClick={() => setMenuOpen(false)}>Connect wallet</button>
+          </div>
         </div>
       </div>
-      </div>
-
-      
     </div>
   );
 };

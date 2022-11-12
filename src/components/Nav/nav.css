@@ -24,11 +24,14 @@
     font-weight: 600;
 }
 
-.connect__section a, .mobile__menu__container .connect__section__mobile a {
+.connect__section a, .mobile__menu__container .connect__section__mobile a, .connect__section button {
     background: var(--btn_color);
     border-radius: 10px;
     color: #fff;
     padding: 0.8rem 1rem;
+    border: none;
+    font-family: 'Red Rose', cursive;
+    cursor: pointer;
 }
 
 .mobile__menu {
@@ -72,7 +75,7 @@
         background-color: grey;
         width: 100%;
         text-align: center;
-        height: 200px;
+        height: 100vh;
         font-size: 1rem;
     }
 
@@ -88,7 +91,15 @@
         margin-top: 2rem;
     }
 
-    .mobile__menu__container .connect__section__mobile a{
+    .mobile__menu__container .connect__section__mobile button{
         padding: .8rem 3rem;
+        background: var(--btn_color);
+        border-radius: 10px;
+        color: #fff;
+        padding: 0.8rem 1rem;
+        font-family: 'Red Rose', cursive;
+        border: none;
+        width: 60%;
+        cursor: pointer;
     }
 }
