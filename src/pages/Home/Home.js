@@ -1,9 +1,13 @@
-import React from 'react'
+import React from 'react';
+import { Welcome, Sponsor } from '../../components';
 
 const Home = () => {
   return (
-    <div>Home</div>
+    <div>
+      <Welcome />
+      <Sponsor />
+    </div>
   )
-}
+};
 
-export default Home
+export default Home;
