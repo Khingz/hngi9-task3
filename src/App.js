@@ -15,7 +15,7 @@ const App = () => {
   const handleClose = () => setOpenModal(false);
 
   return (
-    <div className="App">
+    <div className={openModal ? 'App overlay__effect' : 'App'}>
       <Router>
         <Nav open={handleOpen} />
         <Modal close={handleClose} openModal={openModal} />

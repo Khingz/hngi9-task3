@@ -10,6 +10,11 @@ import './nav.css';
 const Nav = ({open}) => {
   const [menuOpen, setMenuOpen] = useState(false);
 
+  const handleMobileConnect = () => {
+    setMenuOpen(false)
+    open();
+  }
+
   return (
     <div className="nav__container">
       <div className="logo__section">
@@ -74,8 +79,8 @@ const Nav = ({open}) => {
               </NavLink>
             </li>
           </ul>
-          <div className="connect__section__mobile">
-            <button onClick={() => setMenuOpen(false)}>Connect wallet</button>
+          <div className="connect__section__mobile" onClick={open}>
+            <button onClick={handleMobileConnect}>Connect wallet</button>
           </div>
         </div>
       </div>
