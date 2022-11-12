@@ -1,4 +1,7 @@
 import React from 'react';
+import meta_icon from '../../assets/icons/metamask_modal.svg';
+import wallet from '../../assets/icons/wallet_modal.svg';
+import { HiOutlineX, HiChevronRight } from 'react-icons/hi';
 
 import './modal.css';
 
@@ -13,8 +16,29 @@ const Modal = ({ close, openModal }) => {
           e.stopPropagation();
         }}
       >
-        <p onClick={close}>X</p>
-        Hello world
+        <div className="modal__title">
+          <p>Connect Wallet</p>
+          <i>
+            <HiOutlineX onClick={close} />
+          </i>
+        </div>
+        <div className="modal__body">
+          <p>Choose your preffered wallet:</p>
+          <button>
+            <div className="modal__brand">
+              <img src={meta_icon} alt="meta" />
+              Metamask
+            </div>
+            <HiChevronRight />
+          </button>
+          <button>
+            <div className="modal__brand">
+              <img src={wallet} alt="wallet" />
+              WalletConnect
+            </div>
+            <HiChevronRight />
+          </button>
+        </div>
       </div>
     </div>
   );

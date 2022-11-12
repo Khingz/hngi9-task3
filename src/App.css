@@ -25,3 +25,7 @@ a {
     position: fixed;
     overflow: hidden;
 }
+
+button {
+    font-family: 'Red Rose', cursive;
+}

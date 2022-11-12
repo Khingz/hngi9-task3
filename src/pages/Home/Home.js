@@ -1,9 +1,9 @@
 import React from 'react';
 import { Welcome, Sponsor } from '../../components';
 
-const Home = () => {
+const Home = ({toggleClose}) => {
   return (
-    <div>
+    <div onClick={toggleClose}>
       <Welcome />
       <Sponsor />
     </div>

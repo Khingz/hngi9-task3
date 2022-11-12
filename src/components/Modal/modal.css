@@ -1,13 +1,81 @@
 .modal__overlay {
-    width: 100%;
-    min-height: 100vh;
-    background-color: rgba(0, 0, 0, 0.9);
-    color: #fff;
-    position: fixed;
-    top: 0;
-    left: 0;
+  width: 100%;
+  min-height: 100vh;
+  background: rgba(64, 64, 64, 0.3);
+  color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .modal__container {
-    
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  color: #000;
+  border-radius: 16px;
+  width: 40%;
+  padding: 0.5rem 1.2rem 0.8rem 1.2rem;
 }
+
+.modal__title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: solid 1px #cfd8dc;
+}
+
+.modal__title i {
+    cursor: pointer;
+}
+
+.modal__title p {
+    font-weight: 600;
+}
+
+.modal__body {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal__body p {
+    font-size: .8rem;
+}
+
+.modal__body button {
+  background: #f8f9fa;
+  border: 1px solid #cfd8dc;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.8rem;
+  cursor: pointer;
+  padding: 0.8rem 0.7rem;
+}
+
+.modal__body button .modal__brand {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.modal__body button .modal__brand {
+    font-weight: 600;
+}
+
+.modal__body button .modal__brand img {
+    width: 30px;
+    margin-right: 0.5rem;
+}
+
+
+@media only screen and (max-width: 900px) {
+    .modal__container {
+        width: 70%;
+      }
+   
+ }

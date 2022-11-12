@@ -72,10 +72,10 @@
         position: absolute;
         top: 70px;
         left: 0;
-        background-color: grey;
-        width: 100%;
+        background-image: var(--btn_color);
+        min-width: 100%;
         text-align: center;
-        height: 100vh;
+        min-height: 250px;
         font-size: 1rem;
     }
 
@@ -93,13 +93,13 @@
 
     .mobile__menu__container .connect__section__mobile button{
         padding: .8rem 3rem;
-        background: var(--btn_color);
         border-radius: 10px;
-        color: #fff;
+        color: #000;
         padding: 0.8rem 1rem;
         font-family: 'Red Rose', cursive;
         border: none;
         width: 60%;
         cursor: pointer;
+        background-color: #fff;
     }
 }

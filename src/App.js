@@ -10,19 +10,22 @@ import { useState } from 'react';
 
 const App = () => {
   const [openModal, setOpenModal] = useState(false);
+  const [toggleIsOpen, setToggleIsOpen] = useState(false)
 
   const handleOpen = () => setOpenModal(true);
   const handleClose = () => setOpenModal(false);
+  const toggleOpen = () => setToggleIsOpen(true)
+  const toggleClose = () => setToggleIsOpen(false)
 
   return (
     <div className={openModal ? 'App overlay__effect' : 'App'}>
       <Router>
-        <Nav open={handleOpen} />
+        <Nav open={handleOpen} toggleOpen={toggleOpen} toggleClose={toggleClose} toggleIsOpen={toggleIsOpen}/>
         <Modal close={handleClose} openModal={openModal} />
         <ScrollToTop>
           <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/places" element={<Places />} />
+            <Route path="/" element={<Home toggleClose={toggleClose}/>} />
+            <Route path="/places" element={<Places toggleClose={toggleClose}/>} />
           </Routes>
         </ScrollToTop>
         <Footer />

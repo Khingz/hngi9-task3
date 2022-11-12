@@ -1,17 +1,14 @@
-import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import logo_icon from '../../assets/icons/logo_icon.svg';
 import logo_name from '../../assets/icons/logo_icon_name.svg';
-import { HiOutlineMenuAlt1 } from 'react-icons/hi';
-import { HiOutlineX } from 'react-icons/hi';
+import { HiOutlineMenuAlt1, HiOutlineX } from 'react-icons/hi';
 
 import './nav.css';
 
-const Nav = ({open}) => {
-  const [menuOpen, setMenuOpen] = useState(false);
+const Nav = ({open, toggleOpen, toggleClose, toggleIsOpen}) => {
 
   const handleMobileConnect = () => {
-    setMenuOpen(false)
+    toggleClose()
     open();
   }
 
@@ -42,39 +39,39 @@ const Nav = ({open}) => {
         <button onClick={open}>Connect wallet</button>
       </div>
       <div className="mobile__menu">
-        {menuOpen ? (
-          <HiOutlineX onClick={() => setMenuOpen(false)} />
+        {toggleIsOpen ? (
+          <HiOutlineX onClick={toggleClose} />
         ) : (
-          <HiOutlineMenuAlt1 onClick={() => setMenuOpen(true)} />
+          <HiOutlineMenuAlt1 onClick={toggleOpen} />
         )}
 
         {/* Mobile Link */}
         <div
           className={
-            menuOpen
+            toggleIsOpen
               ? 'mobile__menu__container'
               : 'mobile__menu__container hide'
           }
         >
           <ul>
             <li>
-              <NavLink to="/" onClick={() => setMenuOpen(false)}>
+              <NavLink to="/" onClick={toggleClose}>
                 Home
               </NavLink>
             </li>
 
             <li>
-              <NavLink to="/places" onClick={() => setMenuOpen(false)}>
+              <NavLink to="/places" onClick={toggleClose}>
                 Place to stay
               </NavLink>
             </li>
             <li>
-              <NavLink to="#" onClick={() => setMenuOpen(false)}>
+              <NavLink to="#" onClick={toggleClose}>
                 NFTs
               </NavLink>
             </li>
             <li>
-              <NavLink to="#" onClick={() => setMenuOpen(false)}>
+              <NavLink to="#" onClick={toggleClose}>
                 Community
               </NavLink>
             </li>
