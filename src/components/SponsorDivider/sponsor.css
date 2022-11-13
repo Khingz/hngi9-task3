@@ -1,0 +1,29 @@
+.sponsor__container {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    background-image: var(--btn_color);
+    padding: 0.5rem;
+}
+
+.sponsor__container .container {
+    width: 60%;
+}
+
+.sponsor__container .container img {
+    width: 50%;
+}
+
+@media only screen and (max-width: 900px) {
+    .sponsor__container .container {
+        width: 100%;
+    }
+    
+    .sponsor__container .container img {
+        width: 70%;
+    }
+   
+ }

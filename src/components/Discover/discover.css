@@ -1,0 +1,79 @@
+.discover {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-image: var(--btn_color);
+  margin-top: 1rem;
+  position: relative;
+  color: #fff;
+  z-index: -2;
+}
+
+.discover .discover__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 85%;
+  padding: 5rem 0 5rem 0;
+}
+
+.discover__left {
+  width: 50%;
+}
+
+.discover__left h2 {
+  font-size: 2rem;
+}
+
+.discover__left p {
+  width: 80%;
+  line-height: 35px;
+  font-weight: 300;
+  margin-bottom: 2.5rem;
+}
+
+.discover__left button {
+  border-radius: 8px;
+  background-color: #fff;
+  color: #a02279;
+  padding: 0.7rem 2rem 0.7rem 2rem;
+  border: #fff solid 1px;
+  font-family: 'Red Rose', cursive;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.discover__left button:hover {
+  background-image: var(--btn_color);
+  color: #fff;
+}
+
+.discover__right {
+  width: 50%;
+}
+
+.discover__right div {
+  width: 100%;
+  text-align: end;
+}
+
+.discover__right div img {
+  width: 100%;
+}
+
+@media only screen and (max-width: 900px) {
+  .discover .discover__container {
+    flex-direction: column;
+  }
+
+  .discover__left {
+    width: 90%;
+  }
+
+  .discover__right {
+    width: 90%;
+    margin-top: 4rem;
+  }
+}

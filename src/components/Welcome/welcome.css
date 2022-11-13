@@ -1,8 +1,8 @@
 .welcome__container {
-  width: 90%;
-  margin: 4rem auto;
+  width: 85%;
+  margin: 180px auto 4rem auto;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   text-align: left;
 }
@@ -32,7 +32,7 @@
   border-radius: 8px 0px 0px 8px;
   padding: 0.8rem;
   width: 45%;
-  border: 1px solid #A3A3A3;
+  border: 1px solid #a3a3a3;
 }
 
 .welcome__search button {
@@ -42,7 +42,7 @@
   padding: 0.8rem;
   color: #fff;
   font-family: 'Red Rose', cursive;
-  border:#a02279 1px solid;
+  border: #a02279 1px solid;
 }
 
 .welcome__right {
@@ -69,23 +69,22 @@
   width: 100%;
 }
 
-
 @media only screen and (max-width: 900px) {
-   .welcome__container {
+  .welcome__container {
     flex-direction: column;
-   }
+    margin: 120px auto 3.5rem auto;
+  }
 
-   .welcome__left {
+  .welcome__left {
     width: 100%;
     margin-bottom: 2rem;
   }
 
-   .welcome__container h3 {
+  .welcome__container h3 {
     width: 90%;
   }
 
   .welcome__right {
     width: 80%;
   }
-  
 }

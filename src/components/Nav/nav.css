@@ -1,11 +1,22 @@
-.nav__container {
+.nav {
+    display: flex;
     width: 100%;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    background-color: #fff;
+    z-index: 2;
+}
+
+.nav__container {
+    width: 85%;
     margin: auto;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     padding-top: 1.5rem;
-    padding-bottom: 1rem;
+    padding-bottom: 1.2rem;
 }
 
 .logo__section {
@@ -47,8 +58,8 @@
 
 @media only screen and (max-width: 900px) {
     .nav__container {
-        width: 85%;
         justify-content: space-between;
+        width: 80%;
     }
     .link__section, .connect__section {
         display: none;
@@ -75,8 +86,9 @@
         background-image: var(--btn_color);
         min-width: 100%;
         text-align: center;
-        min-height: 250px;
+        min-height: 240px;
         font-size: 1rem;
+        border-bottom: #fff 1px solid;
     }
 
     .mobile__menu__container a {
