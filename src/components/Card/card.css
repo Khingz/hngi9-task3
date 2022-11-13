@@ -1,0 +1,12 @@
+.card__container {
+  /* background: linear-gradient(124.4deg, #ffffff 10.8%, #ffffff 87.34%); */
+  background-color: red;
+  border: 1px solid #d7d7d7;
+  border-radius: 15px;
+  width: fit-content;
+  padding: 0.5rem;
+}
+
+.card__container .card__body .body__top {
+    
+}

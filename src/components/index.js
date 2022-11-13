@@ -4,3 +4,4 @@ export { default as Welcome } from './Welcome/Welcome';
 export { default as Sponsor } from './SponsorDivider/Sponsor';
 export { default as Modal } from './Modal/Modal';
 export { default as Discover } from './Discover/Discover';
+export { default as Card } from './Card/Card';

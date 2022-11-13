@@ -1,0 +1,37 @@
+.place {
+    margin: 130px 0 0 0;
+}
+
+.place__title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.place__title ul{
+    width: 85%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.place__title ul li {
+    cursor: pointer;
+}
+
+.place__title button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 15px;
+    background-color: #fff;
+    border: solid #B4B4B4 1px;
+    border-radius: 8px;
+    padding: 0.5rem 0.8rem;
+    cursor: pointer;
+}
+
+.place__title button img {
+    width: 20%;
+}
