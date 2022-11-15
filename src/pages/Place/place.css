@@ -1,37 +1,116 @@
 .place {
-    margin: 130px 0 0 0;
+  margin: 130px 0 0 0;
 }
 
 .place__title {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.place__title ul{
-    width: 85%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.place__title ul {
+  width: 85%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .place__title ul li {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .place__title button {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    gap: 15px;
-    background-color: #fff;
-    border: solid #B4B4B4 1px;
-    border-radius: 8px;
-    padding: 0.5rem 0.8rem;
-    cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  gap: 15px;
+  background-color: #fff;
+  border: solid #b4b4b4 1px;
+  border-radius: 8px;
+  padding: 0.5rem 0.8rem;
+  cursor: pointer;
 }
 
 .place__title button img {
-    width: 20%;
+  width: 20%;
+}
+
+.place__body {
+  display: flex;
+  justify-content: center;
+  border: solid 1px orange;
+}
+
+.place__body .place__content {
+  border: 1px yellow solid;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+/* Mobile view style  */
+.mobile__title {
+  width: 6rem;
+  display: none;
+}
+
+.mobile__title select {
+  padding: 0.6rem;
+  border: solid #b4b4b4 1px;
+  border-radius: 8px;
+}
+
+/* Mobile style end  */
+
+@media only screen and (max-width: 1050px) {
+  .place__body .place__content {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media only screen and (max-width: 950px) and (min-width: 600px) {
+  .place__body .place__content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .mobile__title {
+    display: inline-block;
+  }
+
+  .desktop__list {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 600px) and (min-width: 320px) {
+  .place__body .place__content {
+    grid-template-columns: 1fr;
+  }
+
+  .mobile__title {
+    display: inline-block;
+  }
+
+  .place__title {
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 320px) and (min-width: 100px) {
+  .place__body .place__content {
+    grid-template-columns: 1fr;
+  }
+
+  .mobile__title {
+    display: inline-block;
+  }
+
+  .desktop__list {
+    display: none;
+  }
+
+  .place__title {
+    flex-direction: column;
+  }
 }

@@ -5,36 +5,53 @@ import setting_icon from '../../assets/icons/settings.svg';
 
 import './place.css';
 
-const Place = () => {
+const Place = ({ toggleClose }) => {
   return (
-    <div className="place">
+    <div className="place" onClick={toggleClose}>
       <div className="place__container">
         <div className="place__title">
           <ul>
-            <li>
+            <li className='desktop__list'>
               <p>Restaurant</p>
             </li>
-            <li>
+            <li className='desktop__list'>
               <p>Cottage</p>
             </li>
-            <li>
+            <li className='desktop__list'>
               <p>Castle</p>
             </li>
-            <li>
+            <li className='desktop__list'>
               <p>Fantasy city</p>
             </li>
-            <li>
+            <li className='desktop__list'>
               <p>beach</p>
             </li>
-            <li>
+            <li className='desktop__list'>
               <p>Carbins</p>
             </li>
-            <li>
+            <li className='desktop__list'>
               <p>Off-grid</p>
             </li>
-            <li>
+            <li className='desktop__list'>
               <p>Farm</p>
             </li>
+
+            {/* title mobile  */}
+            <div className="mobile__title">
+              <select>
+                <option>Restaurant</option>
+                <option>Cottage</option>
+                <option>Castle</option>
+                <option>Ford</option>
+                <option>Fantsy city</option>
+                <option>beach</option>
+                <option>Carbins</option>
+                <option>Off-grid</option>
+                <option>Farm</option>
+              </select>
+            </div>
+
+            {/* end of title mobile  */}
             <li>
               <button>
                 <span>Location</span>
@@ -43,8 +60,13 @@ const Place = () => {
             </li>
           </ul>
         </div>
+
         <div className="place__body">
-          <Card img={data[0].img}/>
+          <div className="place__content">
+            {data.map((item, index) => (
+              <Card img={item.img} key={index} className="card__item" />
+            ))}
+          </div>
         </div>
       </div>
     </div>
