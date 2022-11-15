@@ -1,8 +1,8 @@
 import React from 'react';
-import welcome1 from '../../assets/images/welcome_1.svg';
-import welcome2 from '../../assets/images/welcome_2.svg';
-import welcome3 from '../../assets/images/welcome_3.svg';
-import welcome4 from '../../assets/images/welcome_4.svg';
+import welcome1 from '../../assets/images/welcome_1.png';
+import welcome2 from '../../assets/images/welcome_2.png';
+import welcome3 from '../../assets/images/welcome_3.png';
+import welcome4 from '../../assets/images/welcome_4.png';
 
 import './welcome.css';
 

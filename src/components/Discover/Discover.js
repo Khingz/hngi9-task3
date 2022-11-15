@@ -1,5 +1,5 @@
 import React from 'react';
-import discover_img from '../../assets/images/discover_image.svg';
+import discover_img from '../../assets/images/discover_image.png';
 
 import './discover.css';
 
