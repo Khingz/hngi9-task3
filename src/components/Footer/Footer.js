@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from '../../assets/icons/Logo_F.svg';
 import facebook from '../../assets/icons/facebook.svg';
-import instagram from '../../assets/icons/insta.svg';
+import instagram from '../../assets/icons/instagram.svg';
 import twitter from '../../assets/icons/twitter.svg';
 
 import './footer.css';
@@ -20,10 +20,10 @@ const Footer = () => {
             <img src={instagram} alt="instagram" />
             <img src={twitter} alt="twitter" />
           </div>
-          <p>&copy;2022 Metabnb</p>
+          <p>&copy; 2022 Metabnb</p>
         </div>
         {/* community  */}
-        <div className="footer__community">
+        <div className="footers community">
           <p>Community</p>
           <ul>
             <li>NFT</li>
@@ -33,8 +33,8 @@ const Footer = () => {
           </ul>
         </div>
         {/* Places  */}
-        <div className="footer__places">
-        <p>Places</p>
+        <div className="footers places">
+          <p>Places</p>
           <ul>
             <li>Castle</li>
             <li>Farms</li>
@@ -42,8 +42,8 @@ const Footer = () => {
             <li>Learn more</li>
           </ul>
         </div>
-        <div className="footer__about">
-        <p>About us</p>
+        <div className="footers about">
+          <p>About us</p>
           <ul>
             <li>Road map</li>
             <li>Creators</li>

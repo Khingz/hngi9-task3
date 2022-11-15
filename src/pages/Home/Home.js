@@ -7,8 +7,8 @@ const Home = ({toggleClose}) => {
     <div onClick={toggleClose}>
       <Welcome />
       <Sponsor />
-      <Discover />
       <CardSection />
+      <Discover />
     </div>
   )
 };

@@ -28,7 +28,7 @@
 
 .discover__left p {
   width: 80%;
-  line-height: 35px;
+  line-height: 30px;
   font-weight: 300;
   margin-bottom: 2.5rem;
 }
@@ -76,4 +76,21 @@
     width: 90%;
     margin-top: 4rem;
   }
+}
+
+
+@media only screen and (max-width: 300px) {
+  .discover__left {
+    width: 100%;
+  }
+  
+  .discover__left h2 {
+    font-size: 1.5rem;
+  }
+  
+  .discover__left p {
+    width: 100%;
+    margin-bottom: 1.5rem;
+  }
+  
 }

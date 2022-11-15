@@ -25,6 +25,7 @@
 .welcome__container p {
   width: 80%;
   margin: 1.5rem 0;
+  line-height: 30px;
 }
 
 .welcome__search input {
@@ -87,4 +88,32 @@
   .welcome__right {
     width: 80%;
   }
+}
+
+@media only screen and (max-width: 300px) {
+  .welcome__container h3 {
+    font-size: 1.5rem;
+    width: 100%;
+  }
+  
+  .welcome__container p {
+    width: 100%;
+    font-size: 0.9rem;
+  }
+
+  .welcome__search input {
+    padding: 0.4rem;
+    width: 100%;
+    display: block;
+    border-radius: 8px;
+  }
+  
+  .welcome__search button {
+    padding: 0.4rem;
+    width: 50%;
+    display: block;
+    border-radius: 8px;
+    margin-top: 0.5rem;
+  }
+  
 }
