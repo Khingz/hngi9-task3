@@ -39,11 +39,9 @@
 .place__body {
   display: flex;
   justify-content: center;
-  border: solid 1px orange;
 }
 
 .place__body .place__content {
-  border: 1px yellow solid;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 10px;
@@ -59,6 +57,10 @@
   padding: 0.6rem;
   border: solid #b4b4b4 1px;
   border-radius: 8px;
+}
+
+.mobile__title select:focus {
+  border: solid #b4b4b4 1px;
 }
 
 /* Mobile style end  */
@@ -92,8 +94,8 @@
     display: inline-block;
   }
 
-  .place__title {
-    flex-direction: column;
+  .desktop__list {
+    display: none;
   }
 }
 
@@ -110,7 +112,10 @@
     display: none;
   }
 
-  .place__title {
+  .place__title ul {
     flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 10px;
   }
 }

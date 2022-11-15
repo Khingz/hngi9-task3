@@ -41,7 +41,7 @@
 
 @media only screen and (max-width: 300px) and (min-width: 100px) {
   .card__container {
-    width: 13rem;
+    width: 12rem;
   }
 
   .card__container .card__img{

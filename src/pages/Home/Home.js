@@ -1,5 +1,5 @@
 import React from 'react';
-import { Welcome, Sponsor, Discover } from '../../components';
+import { Welcome, Sponsor, Discover, CardSection } from '../../components';
 
 
 const Home = ({toggleClose}) => {
@@ -8,6 +8,7 @@ const Home = ({toggleClose}) => {
       <Welcome />
       <Sponsor />
       <Discover />
+      <CardSection />
     </div>
   )
 };
